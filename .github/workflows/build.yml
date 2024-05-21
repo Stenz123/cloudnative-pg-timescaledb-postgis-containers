@@ -34,6 +34,16 @@ jobs:
       contents: read
       packages: write
     steps:
+    - name: Set up Docker
+      uses: crazy-max/ghaction-setup-docker@v3
+      with:
+        daemon-config: |
+          {
+            "debug": true,
+            "features": {
+              "containerd-snapshotter": true
+            }
+          }
     - name: Checkout Code
       uses: actions/checkout@v4
 
@@ -74,7 +84,6 @@ jobs:
       with:
         context: ${{ matrix.dir }}
         file: ${{ matrix.file }}
-        platforms: ${{ matrix.platforms }}
         push: false
         load: true
         tags: ${{ env.TAGS }}
