@@ -35,11 +35,11 @@ jobs:
       packages: write
     steps:
     - name: Set up Docker
-      uses: crazy-max/ghaction-setup-docker@v3
+      uses: crazy-max/ghaction-setup-docker@v2
       with:
+        version: v24.0.6
         daemon-config: |
           {
-            "debug": true,
             "features": {
               "containerd-snapshotter": true
             }
