@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_STAGING: "ghcr.io/${{ github.repository_owner }}/timescaledb-postgis-testing"
-  IMAGE_RELEASE: "ghcr.io/${{ github.repository_owner }}/timescaledb-postgis"
+  IMAGE_STAGING: "ghcr.io/stenz123/timescaledb-postgis-testing"
+  IMAGE_RELEASE: "ghcr.io/stenz123/timescaledb-postgis"
 
 jobs:
   generate-jobs:
