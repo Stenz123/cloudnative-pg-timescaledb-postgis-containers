@@ -85,6 +85,7 @@ jobs:
         context: ${{ matrix.dir }}
         file: ${{ matrix.file }}
         push: false
+        platforms: ${{ matrix.platforms }}
         load: true
         tags: ${{ env.TAGS }}
 
