@@ -77,6 +77,7 @@ jobs:
         push: false
         load: true
         tags: ${{ env.TAGS }}
+        platforms: ${{ matrix.platforms }}
 
     - name: Dockle scan
       uses: erzz/dockle-action@v1
