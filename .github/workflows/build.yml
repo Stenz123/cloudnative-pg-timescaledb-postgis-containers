@@ -74,10 +74,10 @@ jobs:
       with:
         context: ${{ matrix.dir }}
         file: ${{ matrix.file }}
+        platforms: ${{ matrix.platforms }}
         push: false
         load: true
         tags: ${{ env.TAGS }}
-        platforms: ${{ matrix.platforms }}
 
     - name: Dockle scan
       uses: erzz/dockle-action@v1
